@@ -60,4 +60,5 @@ gem 'jquery-rails' #for Bootstrap javascript
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'bootstrap', '~> 4.1.2'
+gem 'wg_view_tool', git: 'https://github.com/Warsama-Gabriel/wg_view_tool'
 

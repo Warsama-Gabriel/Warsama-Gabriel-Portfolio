@@ -17,4 +17,9 @@ module ApplicationHelper
       content_tag(:p, "Thanks for visiting me from #{session[:source]}", class: "source-greeting")
     end
 	end
+
+
+  def set_copyright
+    @copyright = WGViewTool::Renderer.copyright('Warsama Gabriel', 'All rights reserved')
+  end
 end
