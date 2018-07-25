@@ -1,7 +1,7 @@
 module ApplicationHelper
 	#html_safe => rails "scrubs" away the html just to return the inner string for protection
 
-	def login_helper style
+	def login_helper style=''
 		#remove condition logic from the views! -->
     #user class can either be of class User or Openstruct -->
     if current_user.is_a?(User)
