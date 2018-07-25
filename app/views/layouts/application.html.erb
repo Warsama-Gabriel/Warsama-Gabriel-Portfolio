@@ -12,17 +12,19 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <%= render 'shared/application_nav' %>
+          <%= login_helper %>
+          <%= yield %>
 
-    <%= render 'shared/nav', location: 'top' %>
-    <br>
-    <%= login_helper %>
-    <%= yield %>
+          <%= set_copyright %>
 
-    <%= set_copyright %>
-
-    <%= source_helper %>
+          <%= source_helper %>
+        </div>
+      </div>
+    </div>
     <%#= debug(params) %>
   </body>
 </html>
