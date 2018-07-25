@@ -1,7 +1,7 @@
 <h1>Portfolio Items</h1>
 
 
-<%= link_to 'create new portfolio item', new_portfolio_url %>
+<%= link_to 'create new portfolio item', new_portfolio_url if logged_in?(:siteadmin) %>
 
 <!-- non structured parial use partial => collection -->
 <%= render partial: 'portfolio_item', collection: @portfolio_items %>
