@@ -1,9 +1,12 @@
 <h2 class="blog-post-title"><%= link_to blog.title.upcase, blog_path(blog) %></h2>
 <p class="blog-post-meta">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago </p>
-<p class="blog-post-meta"></p>
 <p><%= blog.body %></p>
-<%= link_to blog.post_status, toggle_status_blog_path(blog) if logged_in?(:siteadmin) %>
+<% if logged_in?(:siteadmin) %>
+	<p class="blog-post-meta">
+		<%= link_to blog.post_status, toggle_status_blog_path(blog) %>/
+		<%= link_to 'edit', edit_blog_path(blog) if logged_in?(:siteadmin) %>/
+		<%= link_to 'destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:siteadmin) %>
+	</p>
+<% end %>
 
-<%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:siteadmin) %>
-<%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:siteadmin) %>
 
