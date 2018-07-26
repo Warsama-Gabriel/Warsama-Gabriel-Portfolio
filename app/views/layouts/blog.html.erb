@@ -12,37 +12,17 @@
   </head>
 
   <body>
-    <!-- start of nav -->
     <%= render 'shared/blog_nav' %>
-    <!-- end of nav -->
+    <%= render 'shared/blog_masthead' %>
 
-    <!-- start of blog header -->
-    <div class="blog-header">
-      <div class="container">
-        <h1 class="blog-title">Blogs</h1>
-        <p class="lead blog-description">My thoughts on programming, art and music.</p>
-         <p class="lead blog-description"> <%= link_to 'Write a new blog.', new_blog_path if logged_in?(:siteadmin) %></p>
-       
-      </div>
-    </div>
-
-    <!-- end of blog header -->
-
-
-    <!-- start of container and row elements -->
     <div class="container">
       <div class="row">
         <%= yield %>
-        <div class="col-sm-3 offset-sm-1 blog-sidebar">
-          <%= render 'shared/blog_sidebar' %>
-        </div>
-        <%= render 'shared/nav', location: 'bottom' %>
+        <%= render 'shared/blog_sidebar' %>
         <%= source_helper %>
       </div>
     </div>
-    <!-- end of container and row elements -->
-   
-    
+    <%= render 'shared/blog_footer' %>
     <%#= debug(params) %>
   </body>
 </html>
