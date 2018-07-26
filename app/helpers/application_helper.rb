@@ -4,6 +4,7 @@ module ApplicationHelper
 	def login_helper style=''
 		#remove condition logic from the views! -->
     #user class can either be of class User or Openstruct -->
+
     if current_user.is_a?(User)
       link_to 'Logout', destroy_user_session_path, method: :delete, class: style
     else

@@ -12,5 +12,5 @@
 	<p><%= t.name %></p>
 <% end %>
 
-<%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
+<%= link_to 'Edit', edit_portfolio_path(@portfolio) + ' | ' if logged_in?(:sideadmin) %>
 <%= link_to 'Back', portfolios_path %>
