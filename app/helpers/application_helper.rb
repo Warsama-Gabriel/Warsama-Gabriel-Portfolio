@@ -54,7 +54,6 @@ module ApplicationHelper
     nav_items.each do |item|
       nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
     end
-    puts nav_links
     nav_links.html_safe #interpret the html before rendering it on the screen.
   end
 
