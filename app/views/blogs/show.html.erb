@@ -2,8 +2,8 @@
 	<div class="blog-body">
 		<h2><%= @blog.title %></h2>
 		<p><%= @blog.body %></p>
-		<p><%= link_to 'Edit', edit_blog_path(@blog) + ' | ' if logged_in?(:sideadmin) %></p>
-		<p><%= link_to 'Back', blogs_path %></p>
+		<p><%= link_to 'Edit', edit_blog_path(@blog) + ' | ' if logged_in?(:siteadmin) %>
+		<%= link_to 'Back', blogs_path %></p>
 	</div>
 </div>
 

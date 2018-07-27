@@ -18,7 +18,7 @@ class PortfoliosController < ApplicationController
 	end
 
 	def edit
-		#3.times { @portfolio.technologies.build }
+		3.times { @portfolio.technologies.build } unless @portfolio.technologies.any?
 	end
 
 	def show
@@ -40,7 +40,7 @@ class PortfoliosController < ApplicationController
 	def update
 	    respond_to do |format|
 	      if @portfolio.update(portfolio_params)
-	        format.html { redirect_to @portfolio, notice: 'Item successfully updated.' }
+	        format.html { redirect_to portfolio_show_path(@portfolio), notice: 'Item successfully updated.' }
 	      else
 	        format.html { render :edit }
 	      end

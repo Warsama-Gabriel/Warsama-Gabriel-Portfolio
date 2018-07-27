@@ -20,8 +20,9 @@
       <% @portfolio.technologies.each do |t| %>
 		<p><%= t.name %></p>
 	  <% end %>
-
-	  <p><%= link_to 'Edit', edit_portfolio_path(@portfolio) + ' | ' if logged_in?(:sideadmin) %> <%= link_to 'Back', portfolios_path %></p>
+	  <% if logged_in?(:siteadmin) %>
+	  	<p><%= link_to 'Edit', edit_portfolio_path(@portfolio) %></p>
+	  <% end %>
 
     </div>
   </div>
