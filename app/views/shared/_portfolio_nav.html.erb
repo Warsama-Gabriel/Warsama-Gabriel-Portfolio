@@ -1,4 +1,12 @@
-   <div class="navbar-dark bg-dark" id="navbarHeader">
+   
+  <div class="pos-f-t">
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
       <div class="container">
         <div class="row">
           <div class="col-sm-8 py-4">
@@ -6,23 +14,23 @@
             <p class="text-muted">In this portfolio I've listed some professional projects that I've worked on throughout the years. These applications were built using a wide range of tools and languages.</p>
           </div>
           <div class="col-sm-4 py-4">
-            <h4 class="text-white">Contact</h4>
+            <h4 class="text-white">Explore</h4>
             <ul class="list-unstyled">
-              <li><a href="#" class="text-white">Follow on Twitter</a></li>
-              <li><a href="#" class="text-white">Like on Facebook</a></li>
-              <li><a href="#" class="text-white">Email me</a></li>
-              <li><%= login_helper "text-white" %></li>
+              <li><%= link_to 'Home', root_path, class: 'text-white' %></li>
+              <li><%= link_to 'About', about_me_path, class: 'text-white' %></li>
+              <li><%= link_to 'Blogs', blogs_path, class: 'text-white' %></li>
+              <li><%= link_to 'Contact', contact_path, class: 'text-white' %></li>
+              <li><%= link_to 'Portfolio', portfolios_path, class: 'text-white' %></li>
+              <li><%= login_helper('text-white') %></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    
+  </div>
+</div>
+   
 
-    <div class="navbar navbar-inverse bg-inverse">
-      <div class="container d-flex justify-content-between">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-    </div>
+
+
+
