@@ -6,7 +6,7 @@
 ready = undefined
 set_positions = undefined
 
-# get the position of all the cards from the 'data-pos' attribute in an array.
+# set the data-pos attribute in every card element so we get each cards position.
 set_positions = ->
   $('.card').each (i) ->
     $(this).attr 'data-pos', i + 1
