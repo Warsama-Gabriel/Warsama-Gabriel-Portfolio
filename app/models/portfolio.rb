@@ -9,6 +9,9 @@ class Portfolio < ApplicationRecord
 
 	include Placeholder
 
+	mount_uploader :thumb_image, PortfolioUploader
+	mount_uploader :main_image, PortfolioUploader
+
 	validates :title, :body, :main_image, :thumb_image , presence: true
 
 	def self.angular

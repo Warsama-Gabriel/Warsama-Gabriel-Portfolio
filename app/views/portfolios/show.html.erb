@@ -1,7 +1,7 @@
 <div class="container portfolio-container">
   <div class="row">
     <div class="col-md-7">
-      <%= image_tag(@portfolio.main_image) %>
+      <%= image_tag(@portfolio.main_image.to_s, width: '100%') %>
     </div>
 
     <div class="col-md-5">
@@ -21,7 +21,7 @@
 		<p><%= t.name %></p>
 	  <% end %>
 	  <% if logged_in?(:siteadmin) %>
-	  	<p><%= link_to 'Edit', edit_portfolio_path(@portfolio) %></p>
+	  	<p><%= link_to 'Edit', edit_portfolio_path(@portfolio) %> | <%= link_to 'Delete',portfolio_path(@portfolio), method: :delete, data: {confirm: 'Are you sure?'} %></p>
 	  <% end %>
 
     </div>

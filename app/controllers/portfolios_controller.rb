@@ -28,23 +28,23 @@ class PortfoliosController < ApplicationController
 	def create
 		@portfolio = Portfolio.new(portfolio_params) #check against technology attribute in the technology table. 
 
-		respond_to do |f|
+		respond_to do |format|
 			if @portfolio.save
-				f.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.'}
+				format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.'}
 			else
-
+				format.html { render :new }
 			end
 		end
 	end
 
 	def update
-	    respond_to do |format|
-	      if @portfolio.update(portfolio_params)
-	        format.html { redirect_to portfolio_show_path(@portfolio), notice: 'Item successfully updated.' }
-	      else
-	        format.html { render :edit }
-	      end
+	  respond_to do |format|
+	    if @portfolio.update(portfolio_params)
+	      format.html { redirect_to portfolio_show_path(@portfolio), notice: 'Item successfully updated.' }
+	    else
+	      format.html { render :edit }
 	    end
+	  end
 	end
 
 
@@ -63,9 +63,11 @@ class PortfoliosController < ApplicationController
 
 	def portfolio_params
 		params.require(:portfolio).permit(:title, 
-										  :subtitle, 
-										  :body,
-										  technologies_attributes: [:name]
-										  )
+									  :subtitle, 
+									  :body,
+									  :main_image,
+									  :thumb_image,
+									  technologies_attributes: [:name]
+									)
 	end
  end
