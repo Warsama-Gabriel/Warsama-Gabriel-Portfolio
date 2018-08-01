@@ -15,5 +15,6 @@
 //= require jquery-ui
 //= require bootstrap-sprockets
 //= require html.sortable
+//= require cocoon
 //= require turbolinks
 //= require_tree .
