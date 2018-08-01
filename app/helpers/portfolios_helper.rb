@@ -1,18 +1,21 @@
 module PortfoliosHelper
 
-	def image_generator(height:, width:)
-		"http://placehold.it/#{height}x#{width}"
-	end
-
-	def portfolio_img img, type
-		#binding.pry
+	def portfolio_img img=nil, type
+		case type
+			when 'thumb'
+				height = 350
+				width = 250
+			when 'main'
+				height = 600
+				width = 400
+		end
+		
 		if img.present?
-			img
-		elsif
-			type == 'thumb'
-			image_generator(height: '350', width: '200')
+			image_tag(img, size: "#{height}x#{width}")
 		else
-			image_generator(height: '600', width: '400')
+			image_tag("http://placehold.it/#{height}x#{width}")
 		end
 	end
 end
+
+
