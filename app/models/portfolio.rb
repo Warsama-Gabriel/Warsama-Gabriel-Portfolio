@@ -1,6 +1,6 @@
 class Portfolio < ApplicationRecord
 
-	has_many :technologies, inverse_of: :portfolio
+	has_many :technologies
 	#accepts_nested_attributes_for allows us to save parent and child model all in one go.
 	#creates fields_for builder in our forms
 	#passing in a set of key value pairs in the technologies attributes as an array of hashes.
