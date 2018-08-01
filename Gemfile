@@ -57,6 +57,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'jquery-rails' #for Bootstrap javascript
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'bootstrap', '~> 4.1.2'
@@ -68,5 +69,3 @@ gem 'dotenv-rails'
 gem 'carrierwave', '~> 1.2', '>= 1.2.3'
 gem 'mini_magick', '~> 4.8'
 gem 'carrierwave-aws', '~> 1.3'
-
-

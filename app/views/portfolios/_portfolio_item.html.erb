@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" data-id="<%= portfolio_item.id %>">
 	<%= portfolio_img(portfolio_item.thumb_image.to_s, 'thumb') %>
 	<p class="card-text"><%= link_to "#{portfolio_item.title}", portfolio_show_path(portfolio_item) %> <%= portfolio_item.subtitle %></p>
 </div>
