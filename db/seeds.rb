@@ -70,7 +70,7 @@ u = User.create!(
 			 name: 'Admin',
 			 email: 'admin@admin.com',
 			 password: ENV['ADMIN_PASSWORD'],
-			 password_conformation: ENV['ADMIN_PASSWORD']
+			 password_confirmation: ENV['ADMIN_PASSWORD']
 
 			)
 
