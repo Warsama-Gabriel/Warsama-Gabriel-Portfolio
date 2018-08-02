@@ -7,7 +7,7 @@ module DefaultPageContent
 
 	def set_title
 		#set default title
-		@page_title = 'Devcamp Portfolio | WG Portfolio'
+		@page_title = 'WG-Portfolio'
 		@seokeywords = 'Warsama Gabriel Portfolio'
 	end
 end
