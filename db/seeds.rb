@@ -74,7 +74,7 @@ u = User.create!(
 
 			)
 
-u.roles = :siteadmin
+u.update!(roles: :siteadmin)
 
 
 
