@@ -5,7 +5,8 @@ class Portfolio < ApplicationRecord
 	#creates fields_for builder in our forms
 	#passing in a set of key value pairs in the technologies attributes as an array of hashes.
 	accepts_nested_attributes_for :technologies, 
-								   reject_if: lambda {|attrs| attrs['name'].blank? }
+																allow_destroy: true,
+								   							reject_if: lambda {|attrs| attrs['name'].blank? }
 
 	mount_uploader :thumb_image, PortfolioUploader
 	mount_uploader :main_image, PortfolioUploader

@@ -22,12 +22,9 @@ class PortfoliosController < ApplicationController
 
 	def new
 		@portfolio = Portfolio.new
-		#instantiate portfolio item technologies
-		3.times { @portfolio.technologies.build }
 	end
 
 	def edit
-		3.times { @portfolio.technologies.build } unless @portfolio.technologies.any?
 	end
 
 	def show
@@ -76,7 +73,7 @@ class PortfoliosController < ApplicationController
 									  :body,
 									  :main_image,
 									  :thumb_image,
-									  technologies_attributes: [:name]
+									  technologies_attributes: [:id, :name, :_destroy]
 									)
 	end
  end
