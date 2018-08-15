@@ -1,4 +1,4 @@
-module ApplicationHelper
+smodule ApplicationHelper
 	#html_safe => rails "scrubs" away the html just to return the inner string for protection
 
 	def login_helper style = ''
